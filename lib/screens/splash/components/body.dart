@@ -1,6 +1,7 @@
 // ignore: unused_import
 import 'package:desain_awal/components/default_button.dart';
 import 'package:desain_awal/constants.dart';
+import 'package:desain_awal/screens/Sign_in/sign_in.dart';
 // ignore: unused_import
 import 'package:desain_awal/size_config.dart';
 import 'package:flutter/material.dart';
@@ -25,17 +26,21 @@ class _BodyState extends State<Body> {
 
   List<Map<String, String>> splashData = [
     {
-      "text": "Belanja Asyik, Duit Aman! Let's Go",
+      "text": "WOY KOPI ROKOK ",
       "image": "assets/images/data.png",
     },
     {
-      "text": "Ini adalah cerita dengan kawan sejalan",
+      "text": "PAJEK SINI PAJEK KOPI",
       "image": "assets/images/data1.png",
     },
     {
-      "text": "yang merubah menjadi penghianat",
+      "text": "NGUPII DULU NGUPII KOPI",
       "image": "assets/images/data2.png",
     },
+    {
+      "text": "SEBELUM PULANG NGUPII DULU ",
+      "image": "assets/images/data4.png",
+    }
   ];
 
   @override
@@ -100,7 +105,11 @@ class _BodyState extends State<Body> {
                       ),
                       DefaultButton(
                         text: "CONTINUE",
-                        press: () {},
+                        press: () {
+                          // ketika dipencet dia akan ngeroute ke screen dari class SignInScreen #3
+                          // lanjut ke konfigurasi sign_in
+                          Navigator.pushNamed(context, SignInScreen.routeName);
+                        },
                       ),
                       Spacer(),
                     ],

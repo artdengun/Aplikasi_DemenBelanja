@@ -23,7 +23,7 @@ class SplashContent extends StatelessWidget {
             children: <Widget>[
               Spacer(),
               Text(
-                "DEMEN BELANJA",
+                "",
                 style: TextStyle(
                     fontSize: getProportionateScreenWidth(27),
                     color: kPrimaryColor,
