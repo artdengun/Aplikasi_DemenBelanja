@@ -26,19 +26,23 @@ class _BodyState extends State<Body> {
 
   List<Map<String, String>> splashData = [
     {
-      "text": "WOY KOPI ROKOK ",
-      "image": "assets/images/data.png",
-    },
-    {
-      "text": "PAJEK SINI PAJEK KOPI",
+      "text":
+          "Gunakan komputer dan internet untuk mengakses perkuliahan, Mudahkan Kuliah di Pranata Indonesia",
       "image": "assets/images/data1.png",
     },
     {
-      "text": "NGUPII DULU NGUPII KOPI",
+      "text":
+          "Jadwal kuliah fleksibel ini didukung dengan akses materi yang bisa dilakukan dari mana pun dan kapan pun.",
       "image": "assets/images/data2.png",
     },
     {
-      "text": "SEBELUM PULANG NGUPII DULU ",
+      "text":
+          "Melalui media, proses pembelajaran bisa lebih menarik dan menyenangkan.",
+      "image": "assets/images/data3.png",
+    },
+    {
+      "text":
+          "Bisa dilakuan dari mana saja seperti di rumah, di kantor atau di tempat lainnya ",
       "image": "assets/images/data4.png",
     }
   ];
