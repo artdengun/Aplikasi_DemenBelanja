@@ -1,5 +1,5 @@
 import 'package:desain_awal/components/default_button.dart';
-import 'package:desain_awal/screens/Sign_in/sign_in.dart';
+import 'package:desain_awal/screens/Dashboard/dashboard_menu_screen.dart';
 import 'package:desain_awal/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -25,9 +25,9 @@ class Body extends StatelessWidget {
         SizedBox(
           width: SizeConfig.screenWidth * 0.6,
           child: DefaultButton(
-            text: "KEMBALI",
+            text: "Return Dashboard",
             press: () {
-              Navigator.pushNamed(context, SignInScreen.routeName);
+              Navigator.popAndPushNamed(context, DashboardMenuScreen.routeName);
             },
           ),
         ),

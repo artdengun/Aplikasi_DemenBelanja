@@ -1,3 +1,5 @@
+// import 'package:desain_awal/screens/Sign_up/Sign_up_Screen.dart';
+import 'package:desain_awal/screens/Sign_up/Sign_Up_Screen.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -19,13 +21,22 @@ class NoAccountText extends StatelessWidget {
             fontSize: getProportionateScreenWidth(16),
           ),
         ),
-        Text(
-          " Sign Up  ",
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(16),
-            color: kPrimaryColor,
+        // GestureDetector(
+        // onTap: () =>
+        //     // Navigator.popAndPushNamed(context, SignUpScreen.routeName),
+        // child: Text(
+        GestureDetector(
+          onTap: () =>
+              Navigator.popAndPushNamed(context, SignUpScreen.routeName),
+          child: Text(
+            " Sign Up  ",
+            style: TextStyle(
+              fontSize: getProportionateScreenWidth(16),
+              color: kPrimaryColor,
+            ),
           ),
         ),
+        // ),
       ],
     );
   }
