@@ -2,6 +2,7 @@ import 'package:desain_awal/components/CUstom_suffix_icons.dart';
 import 'package:desain_awal/components/default_button.dart';
 import 'package:desain_awal/components/form_error.dart';
 import 'package:desain_awal/screens/forgot_password/forgot_password.dart';
+import 'package:desain_awal/screens/login_succes/login_succes_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -69,6 +70,9 @@ class _SignFormState extends State<SignForm> {
             press: () {
               if (_fromKey.currentState.validate()) {
                 _fromKey.currentState.save();
+                // datanya nanti ada disini
+
+                Navigator.pushNamed(context, LoginSuccesScreen.routeName);
               }
             },
           )
@@ -89,6 +93,7 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(kShortPassError);
           });
+          return "";
         }
         return null;
       },
@@ -97,10 +102,12 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.add(kPassNullError);
           });
+          return "";
         } else if (value.length < 8 && !errors.contains(kShortPassError)) {
           setState(() {
             errors.add(kShortPassError);
           });
+          return "";
         }
         return null;
       },
@@ -141,11 +148,13 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(kEmailNullError);
           });
+          return "";
         } else if (emailValidationRegExp.hasMatch(value) &&
             errors.contains(kInvalidEmailError)) {
           setState(() {
             errors.remove(kInvalidEmailError);
           });
+          return "";
         }
         return null;
       },
@@ -154,11 +163,13 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.add(kEmailNullError);
           });
+          return "";
         } else if (!emailValidationRegExp.hasMatch(value) &&
             !errors.contains(kInvalidEmailError)) {
           setState(() {
             errors.add(kInvalidEmailError);
           });
+          return "";
         }
         return null;
       },
