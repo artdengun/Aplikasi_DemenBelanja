@@ -1,6 +1,7 @@
 import 'package:desain_awal/components/CUstom_suffix_icons.dart';
 import 'package:desain_awal/components/default_button.dart';
 import 'package:desain_awal/components/form_error.dart';
+import 'package:desain_awal/screens/forgot_password/forgot_password.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -46,9 +47,16 @@ class _SignFormState extends State<SignForm> {
                   }),
               Text("Remember me"),
               Spacer(),
-              Text(
-                "Forgot Password",
-                style: TextStyle(decoration: TextDecoration.underline),
+              GestureDetector(
+                onTap: () => Navigator.popAndPushNamed(
+                    context, ForgotPasswordScreen.routeName),
+                child: Text(
+                  "Forgot Password",
+                  style: TextStyle(
+                      fontSize: getProportionateScreenWidth(15),
+                      color: kPrimaryColor,
+                      decoration: TextDecoration.underline),
+                ),
               )
             ],
           ),

@@ -1,3 +1,4 @@
+import 'package:desain_awal/screens/forgot_password/forgot_password.dart';
 import 'package:flutter/material.dart';
 
 import 'component/body.dart';
@@ -13,9 +14,12 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       // ke bagian main.dart untuk mengatur warna dari appbar kita #4
       appBar: AppBar(
-        title: Text("Sign in"),
+        title: GestureDetector(
+            onTap: () => Navigator.popAndPushNamed(
+                context, ForgotPasswordScreen.routeName),
+            child: Text("Sign in")),
       ),
-      body: Body(), 
+      body: Body(),
     );
   }
 }
