@@ -88,10 +88,12 @@ class _SignFormState extends State<SignForm> {
         if (value.isNotEmpty && errors.contains(kPassNullError)) {
           setState(() {
             errors.remove(kPassNullError);
+            return "";
           });
         } else if (value.length >= 8 && errors.contains(kShortPassError)) {
           setState(() {
             errors.remove(kShortPassError);
+            return "";
           });
           return "";
         }
@@ -102,12 +104,10 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.add(kPassNullError);
           });
-          return "";
         } else if (value.length < 8 && !errors.contains(kShortPassError)) {
           setState(() {
             errors.add(kShortPassError);
           });
-          return "";
         }
         return null;
       },
@@ -148,7 +148,6 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(kEmailNullError);
           });
-          return "";
         } else if (emailValidationRegExp.hasMatch(value) &&
             errors.contains(kInvalidEmailError)) {
           setState(() {
@@ -156,20 +155,17 @@ class _SignFormState extends State<SignForm> {
           });
           return "";
         }
-        return null;
       },
       validator: (value) {
         if (value.isEmpty && !errors.contains(kEmailNullError)) {
           setState(() {
             errors.add(kEmailNullError);
           });
-          return "";
         } else if (!emailValidationRegExp.hasMatch(value) &&
             !errors.contains(kInvalidEmailError)) {
           setState(() {
             errors.add(kInvalidEmailError);
           });
-          return "";
         }
         return null;
       },
