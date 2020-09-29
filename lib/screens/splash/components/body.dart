@@ -1,6 +1,7 @@
 // ignore: unused_import
 import 'package:desain_awal/components/default_button.dart';
 import 'package:desain_awal/constants.dart';
+import 'package:desain_awal/screens/Sign_in/sign_in.dart';
 // ignore: unused_import
 import 'package:desain_awal/size_config.dart';
 import 'package:flutter/material.dart';
@@ -25,17 +26,25 @@ class _BodyState extends State<Body> {
 
   List<Map<String, String>> splashData = [
     {
-      "text": "Belanja Asyik, Duit Aman! Let's Go",
-      "image": "assets/images/data.png",
-    },
-    {
-      "text": "Ini adalah cerita dengan kawan sejalan",
+      "text":
+          "Gunakan komputer dan internet untuk mengakses perkuliahan, Mudahkan Kuliah di Pranata Indonesia",
       "image": "assets/images/data1.png",
     },
     {
-      "text": "yang merubah menjadi penghianat",
+      "text":
+          "Jadwal kuliah fleksibel ini didukung dengan akses materi yang bisa dilakukan dari mana pun dan kapan pun.",
       "image": "assets/images/data2.png",
     },
+    {
+      "text":
+          "Melalui media, proses pembelajaran bisa lebih menarik dan menyenangkan.",
+      "image": "assets/images/data3.png",
+    },
+    {
+      "text":
+          "Bisa dilakuan dari mana saja seperti di rumah, di kantor atau di tempat lainnya ",
+      "image": "assets/images/data4.png",
+    }
   ];
 
   @override
@@ -100,7 +109,11 @@ class _BodyState extends State<Body> {
                       ),
                       DefaultButton(
                         text: "CONTINUE",
-                        press: () {},
+                        press: () {
+                          // ketika dipencet dia akan ngeroute ke screen dari class SignInScreen #3
+                          // lanjut ke konfigurasi sign_in
+                          Navigator.pushNamed(context, SignInScreen.routeName);
+                        },
                       ),
                       Spacer(),
                     ],
